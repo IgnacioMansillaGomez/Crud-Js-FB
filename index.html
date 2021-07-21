@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container ml-0 p-4">
+      <div class="row justify-content-between">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <form id="task-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="task-title"
+                    class="form-control"
+                    placeholder="Titulo"
+                    autofocus
+                  />
+                </div>
+                <div class="form-group mt-2">
+                  <textarea
+                    name=""
+                    id="task-description"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Descripcion"
+                  ></textarea>
+                </div>
+                <button class="btn btn-success mt-2" id="btn-task-form">
+                  Agregar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" id="task-container"></div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDhUMqvhsfz4qYfgaqCJkTbdiRBI5qdx1Y",
+        authDomain: "etignaciomansilla.firebaseapp.com",
+        projectId: "etignaciomansilla",
+        storageBucket: "etignaciomansilla.appspot.com",
+        messagingSenderId: "497036572504",
+        appId: "1:497036572504:web:fa4e7461aa4a92d373972d",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
